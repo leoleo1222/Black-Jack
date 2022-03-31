@@ -42,8 +42,7 @@ public class Player{
 
     public String toString(){
         return "Hand: " + getHand()
-                + "\nPoints: [" + points[0] + "]"
-                + ((Hand.contains("A") && points[1] <= 21? " or [" + points[1] + "]":""));
+                + "\nPoints: " + ((Hand.contains("A") && points[1] < 21? "[" + points[1] + "]":"[" + points[0] +"]"));
     }
 
     public void reset(){
